@@ -46,7 +46,7 @@
             // 
             this.btnSerializeToJson.Location = new System.Drawing.Point(30, 336);
             this.btnSerializeToJson.Name = "btnSerializeToJson";
-            this.btnSerializeToJson.Size = new System.Drawing.Size(141, 23);
+            this.btnSerializeToJson.Size = new System.Drawing.Size(200, 23);
             this.btnSerializeToJson.TabIndex = 1;
             this.btnSerializeToJson.Text = "Serialize To Json";
             this.btnSerializeToJson.UseVisualStyleBackColor = true;
@@ -57,7 +57,7 @@
             this.txtSerializeOutput.Location = new System.Drawing.Point(30, 67);
             this.txtSerializeOutput.Multiline = true;
             this.txtSerializeOutput.Name = "txtSerializeOutput";
-            this.txtSerializeOutput.Size = new System.Drawing.Size(141, 263);
+            this.txtSerializeOutput.Size = new System.Drawing.Size(437, 263);
             this.txtSerializeOutput.TabIndex = 2;
             // 
             // Form1

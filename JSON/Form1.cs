@@ -28,6 +28,9 @@ namespace JSON
             new EmploeeModel {Id = 101, FirstName = "Morteza", LastName = "Chegeni"},
             new EmploeeModel {Id = 101, FirstName = "Morteza", LastName = "Chegeni"},
             };
+
+           string json = Newtonsoft.Json.JsonConvert.SerializeObject(emploeeList);
+            txtSerializeOutput.Text = json;
         }
     }
 }
