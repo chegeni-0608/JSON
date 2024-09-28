@@ -55,11 +55,20 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmKeyboardEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKeyboardEvent.Designer.cs">
+      <DependentUpon>frmKeyboardEvent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\EmploeeModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKeyboardEvent.resx">
+      <DependentUpon>frmKeyboardEvent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
