@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Common.Resources;
 
 namespace JSON
 {
@@ -57,15 +58,48 @@ namespace JSON
 
         private void txtMobile_TextChanged(object sender, EventArgs e)
         {
-            Regex regex = new Regex(@"09\d{9}");
-            if(!regex.IsMatch(txtMobile.Text))
+            //Regex regex = new Regex(@"09\d{9}");
+            //if (!regex.IsMatch(txtMobile.Text))
+            //{
+            //    errorProvider1.SetError(txtMobile, "فرمت شماره اشتباه است");
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
+           // ChechRegex(@"09\d{9}", txtMobile, "فرمت شماره اشتباه است");
+            ChechRegex(@"09\d{9}", txtMobile, Messages.MobileInvalid);
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            //Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            //if (!regex.IsMatch(txtEmail.Text))
+            //{
+            //    errorProvider1.SetError(txtEmail, "فرمت ایمیل اشتباه است");
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
+
+            //ChechRegex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", txtEmail, "فرمت ایمیل اشتباه است");
+            //ChechRegex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", txtEmail, Messages.EmailInvalid);
+            ChechRegex(regexpattern., txtEmail, Messages.EmailInvalid);
+        }
+        private void ChechRegex(String pattern, TextBox control, string errorMessage)
+        {
+            Regex regex = new Regex(pattern);
+            if (!regex.IsMatch(control.Text))
             {
-                errorProvider1.SetError(txtMobile, "فرمت موبایل اشتباه است");
+                errorProvider1.SetError(control, errorMessage);
             }
             else
             {
                 errorProvider1.Clear();
             }
         }
+
+
     }
 }
